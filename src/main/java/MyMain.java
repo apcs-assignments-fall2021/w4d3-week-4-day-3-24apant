@@ -126,7 +126,6 @@ public class MyMain {
         public static int[] bubbleSort(int[] arr){
             int[] newArr = arr.clone();
             int temp;
-            int[] newArrCopy = new int[arr.length];
             for (int j = 0; j < arr.length * arr.length; j++) {
 
                 for (int i = 0; i < arr.length; i++) {
@@ -136,7 +135,6 @@ public class MyMain {
                         newArr[i] = temp;
                     }
                 }
-                newArrCopy = newArr;
             }
             return newArr;
 
