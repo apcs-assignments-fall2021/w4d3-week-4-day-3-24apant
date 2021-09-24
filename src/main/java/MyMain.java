@@ -110,7 +110,7 @@ public class MyMain {
     public static int[] bubbleSort(int[] arr) {
         int[] finalArr = new int[arr.length];
         int[] Arr = arr.clone();
-        int[] largestNum = new int[2];
+        int[] largestNum;
         for (int i = 0; i < arr.length; i ++){
             largestNum = FindLargestNum(Arr);
             Arr = PruneList(Arr, largestNum[1]);
