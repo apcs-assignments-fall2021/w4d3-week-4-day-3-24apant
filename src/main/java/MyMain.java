@@ -72,6 +72,9 @@ public class MyMain {
     // Implement the bubble sort algorithm that we discussed in class
     // to sort our code
     // This algorithm returns the sorted array
+
+
+    /*
     public static int[] FindLargestNum(int[] arr){
         int max = 0;
         int index = 0;
@@ -118,8 +121,26 @@ public class MyMain {
 
         }
         return reverseList(finalArr);
-    }
+    }*/
 
+        public static int[] bubbleSort(int[] arr){
+            int[] newArr = arr.clone();
+            int temp;
+            int[] newArrCopy = new int[arr.length];
+            for (int j = 0; j < arr.length * arr.length; j++) {
+
+                for (int i = 0; i < arr.length; i++) {
+                    if (i != arr.length - 1 && newArr[i] > newArr[i + 1]) {
+                        temp = newArr[i + 1];
+                        newArr[i + 1] = newArr[i];
+                        newArr[i] = temp;
+                    }
+                }
+                newArrCopy = newArr;
+            }
+            return newArr;
+
+        }
 
     public static void main(String[] args) {
         System.out.println("printEvensBackwards Tests:");
